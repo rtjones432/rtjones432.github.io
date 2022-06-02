@@ -1,0 +1,21 @@
+div.outer {
+    border-radius: 10px;
+    background: rgb(100, 100, 100);
+    width: 90%;
+    min-height: 120px;
+}
+
+#fake-console {
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px;
+    background: none;
+    max-width: 500px;
+
+}
+
+#ai-image {
+    float: right;
+    border-radius: 10px;
+    margin: 10px;
+    height: 100px;
+}
