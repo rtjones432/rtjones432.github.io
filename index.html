@@ -5,56 +5,58 @@
         <meta content="dark" name="color-scheme">
         <title>RTJones' Home</title>
         <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
-        <script src="scripts/index.js"></script>
+        <script>
+            function minimizeMenueOnScroll() {
+                menu = document.getElementById('nav')
+                home = document.getElementById("home");
+                info = document.getElementById("info");
+                portfolio = document.getElementById("portfolio");
+                favorites = document.getElementById("favorites");
+                inspirations = document.getElementById("inspirations");
+                if (!menu) {
+                    return;
+                }
+                
+                var screensDown = window.pageYOffset / window.outerHeight
+                if (screensDown > 1) {
+
+                    menuheight = 50;
+                    menuFontSize = 25
+                    menu.style.height = menuheight.toString().concat("px");
+                    menu.style.fontSize = menuFontSize.toString().concat("px");
+                }
+                else {
+                    menuheight = (200 - (150 * screensDown));
+                    menuFontSize = (50 - (25 * screensDown));
+                    menu.style.height = menuheight.toString().concat("px");
+                    menu.style.fontSize = menuFontSize.toString().concat("px");
+                }
+            }
+            window.addEventListener('scroll',minimizeMenueOnScroll);
+            minimizeMenueOnScroll();
+        </script>
     </head>
     <body>
-        <header id="header">
-            <a class="header" href="index.html"><h1 class="header">Ryan T Jones</h1></a>
-        </header>
-        
         <nav>
-            <div class="top-menu-border">
-                <div class="top-menu">
-                    <a class="top-menu" href="pages/office.html">Office</a>
-                    <a class="top-menu" href="pages/garage.html">Garage</a>
-                    <a class="top-menu" href="pages/library.html">Library</a>
-                    <a class="top-menu" href="pages/basement.html">Basement</a>
-                </div>
+            <div id="nav" class="top-menu-border">
+                <a class="top-menu" href="index.html"><div class="vertical-align">Home</div></a>
+                <a class="top-menu" href="pages/info.html"><div class="vertical-align">Info</div></a>
+                <a class="top-menu" href="pages/Portfolio.html"><div class="vertical-align">Portfolio</div></a>
+                <a class="top-menu" href="pages/Favorites.html"><div class="vertical-align">Favorites</div></a>
+                <a class="top-menu" href="pages/Inspirations.html"><div class="vertical-align">Inspirations</div></a>
             </div>
         </nav>
-        
-        <br>
-
-        <div class="outer">
+        <section id="home">
+            <div id="header-padding" class="vertical-align">
+                <header>
+                    <h1>Ryan Jones</h1>
+                </header>
+            </div> 
+        </section>
+        <section id="preview-info">
             <div>
-                <img id="ai-image" src="images/ai.jpg" alt="photo of ai">
+                <h2>About Me</h2>
             </div>
-            <div id="fake-console">
-                <script>
-                    let timeout = 0;
-                    timeout = slow_append_inner("fake-console", ">Hello...", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">My Name is " + gen_name() + " and I will be your guide today", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">If you direct your attention to the menu bar you will see several options", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">head up stairs to the Office for proffesianal information on the maker", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">through that door is the Garage where you can find other projects by the maker", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">around the corner is the library where you can find works apresiated by the maker", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">the basement is down those stairs and is home to some cool stuff", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">If at anypoint you get lost clicking on the makers name will bring you back to me", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">I hope I have been of assistance", timeout += 1000);
-                    timeout = slow_append_inner("fake-console", ">If you see the maker please put in a good word for me", timeout += 1000);
-                </script>
-            </div>
-        </div>
-        
-        <div id="footer">
-            Disclaimer: this site is a work in progress
-        </div>
+        </section>
     </body>
 </html>
