@@ -5,19 +5,19 @@
         <meta content="dark" name="color-scheme">
         <title>RTJones' Home</title>
         <link rel="stylesheet" href="css/site.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script>
             function minimizeMenueOnScroll() {
                 menu = document.getElementById('nav')
                 home = document.getElementById("home");
-                info = document.getElementById("info");
-                portfolio = document.getElementById("portfolio");
-                favorites = document.getElementById("favorites");
-                inspirations = document.getElementById("inspirations");
-                if (!menu) {
+                if (!menu || !home) {
                     return;
                 }
-                
-                var screensDown = window.pageYOffset / window.outerHeight
+
+                vheight = home.offsetHeight;
+                screensDown = window.pageYOffset / vheight
+                console.log(vheight)
                 if (screensDown > 1) {
 
                     menuheight = 50;
@@ -37,25 +37,67 @@
         </script>
     </head>
     <body>
-        <nav>
-            <div id="nav" class="top-menu-border">
-                <a class="top-menu" href="index.html"><div class="vertical-align">Home</div></a>
-                <a class="top-menu" href="pages/info.html"><div class="vertical-align">Info</div></a>
-                <a class="top-menu" href="pages/Portfolio.html"><div class="vertical-align">Portfolio</div></a>
-                <a class="top-menu" href="pages/Favorites.html"><div class="vertical-align">Favorites</div></a>
-                <a class="top-menu" href="pages/Inspirations.html"><div class="vertical-align">Inspirations</div></a>
+        <nav >
+            <div id="nav">
+                <a class="top-menu vertical-align c1" href="index.html#home"><div class="vertical-align " ><span class="material-symbols-outlined" id="home-button">home</span></div></a>
+                <a class="top-menu vertical-align c2" href="index.html#preview-info"><div class="vertical-align ">Info</div></a>
+                <a class="top-menu vertical-align c3" href="index.html#preview-info"><div class="vertical-align ">Portfolio</div></a>
+                <a class="top-menu vertical-align c4" href="index.html#preview-info"><div class="vertical-align ">Inspirations</div></a>
             </div>
         </nav>
         <section id="home">
             <div id="header-padding" class="vertical-align">
                 <header>
                     <h1>Ryan Jones</h1>
+                    <hr>
+                    Technology Professional | Computing Enthuseist | Lifelong Engineer
+                    <hr>
                 </header>
             </div> 
+            <div id="down-arrow">
+                <span class="material-symbols-outlined">
+                    <a href="index.html#preview-info">arrow_downward</a>
+                    
+                </span>
+            </div>            
         </section>
         <section id="preview-info">
-            <div>
-                <h2>About Me</h2>
+            <div class="section-body">
+                <div class="sbar1"></div>
+                <div class="sbar2"><div class="sbar3"><h2 class="c2 vertical-align">About.Me</h2></div></div>
+                <div class="sbar4">info > About.Me > background</div>
+                <div class="sbar5"></div>
+                <div class="line-nums"><script>
+                    let lineNum = 0;
+                    let fontSize = 19;
+                    
+                    while (lineNum * fontSize < document.getElementById("preview-info").offsetHeight-103){
+                        document.write(lineNum+1,"<br>");
+                        lineNum++;
+                    }
+                        
+                </script></div>
+                <p>Hello! Welcome to my website. I am your host Ryan Jones. I have pulled together this website
+                    with the purpose of providing a quick introduction to my background and curent projects.
+                </p>
+                <h3>My Education</h3>
+                <p>I graduated from Rhodes College in May 2022 with a B.S. majoring in Computer Science</p>
+                <h3>My Experience</h3>
+                <p></p>
+                <h3>What I am Working on now</h3>
+                <p></p>
+            </div>
+        </section>
+        <section id="preview-projects">
+            <div class="section-body">
+                <h2>Projects</h2>
+                <p>Here are a few past, present, and future projects.</p>
+            </div>
+        </section>
+        <section id="preview-inspirations">
+            <div class="section-body">
+                <h2>Inspirations</h2>
+                <p>I am including a resource of my inspirations (people, product, books, etc...) so that you may better understand who I am, what I do, and why I do it.</p>
             </div>
         </section>
     </body>
