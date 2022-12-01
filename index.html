@@ -37,14 +37,18 @@
         </script>
     </head>
     <body>
-        <nav >
+        <nav>
             <div id="nav">
-                <a class="top-menu vertical-align c1" href="index.html#home"><div class="vertical-align " ><span class="material-symbols-outlined" id="home-button">home</span></div></a>
-                <a class="top-menu vertical-align c2" href="index.html#preview-info"><div class="vertical-align ">Info</div></a>
-                <a class="top-menu vertical-align c3" href="index.html#preview-info"><div class="vertical-align ">Portfolio</div></a>
-                <a class="top-menu vertical-align c4" href="index.html#preview-info"><div class="vertical-align ">Inspirations</div></a>
+                <a class="top-menu vertical-align color-section-1" href="index.html#home"><div class="vertical-align " ><span class="material-symbols-outlined" id="home-button">home</span></div></a>
+                <a class="top-menu vertical-align color-section-2" href="index.html#preview-info"><div class="vertical-align ">Info</div></a>
+                <a class="top-menu vertical-align color-section-3" href="index.html#preview-projects"><div class="vertical-align ">Portfolio</div></a>
+                <a class="top-menu vertical-align color-section-4" href="index.html#preview-inspirations"><div class="vertical-align ">Inspirations</div></a>
             </div>
         </nav>
+        <div id="right-bar-1"></div>
+        <div id="right-bar-2"></div>
+        <div id="right-bar-3"></div>
+        <div id="right-bar-4"></div>
         <section id="home">
             <div id="header-padding" class="vertical-align">
                 <header>
@@ -64,34 +68,104 @@
         <section id="preview-info">
             <div class="section-body">
                 <div class="sbar1"></div>
-                <div class="sbar2"><div class="sbar3"><h2 class="c2 vertical-align">About.Me</h2></div></div>
+                <div class="sbar2"><div class="sbar3"><h2 class="color-section-2 vertical-align">About.Me</h2></div></div>
                 <div class="sbar4">info > About.Me > background</div>
                 <div class="sbar5"></div>
-                <div class="line-nums"><script>
+                <div class="line-nums color-line-nums"><script>
                     let lineNum = 0;
                     let fontSize = 19;
                     
-                    while (lineNum * fontSize < document.getElementById("preview-info").offsetHeight-103){
+                    while (lineNum * fontSize < document.getElementById("preview-info").offsetHeight-150){
                         document.write(lineNum+1,"<br>");
                         lineNum++;
                     }
                         
                 </script></div>
-                <p>Hello! Welcome to my website. I am your host Ryan Jones. I have pulled together this website
-                    with the purpose of providing a quick introduction to my background and curent projects.
-                </p>
-                <h3>My Education</h3>
-                <p>I graduated from Rhodes College in May 2022 with a B.S. majoring in Computer Science</p>
-                <h3>My Experience</h3>
-                <p></p>
-                <h3>What I am Working on now</h3>
-                <p></p>
+                <div>
+                    <span class="color-comment">/* Hello! Welcome to my website. In this section you will find an overview of who is Ryan Jones.*\
+                    </span>
+                    <br>
+                    <span class="color-tag">my.education </span><span class="color-bracket">{</span>
+                    <br>
+                    <span class="color-name indent">school</span>
+                    <span class="white-text">: Rhodes College</span>
+                    <br>
+                    <span class="color-name indent">degree</span>
+                    <span class="white-text">: Bachelers of Science</span>
+                    <br>
+                    <span class="color-name indent">major</span>
+                    <span class="white-text">: Computer Science</span>
+                    <br>
+                    <span class="color-name indent">date</span>
+                    <span class="white-text">: 2018-2022</span>
+                    <br>
+                    <span class="color-bracket">}</span>
+                    <br><br>
+                    <span class="color-tag">my.experience </span><span class="color-bracket">{</span>
+                    <br>
+                    <span class="color-name indent">Employer</span>
+                    <span class="white-text">: Rhodes College</span>
+                    <br>
+                    <span class="color-name indent">Role</span>
+                    <span class="white-text">: CubeSat Flight Software Development Lead</span>
+                    <br>
+                    <span class="color-name indent">Role</span>
+                    <span class="white-text">: Computer Science Tutor</span>
+                    <br>
+                    <span class="color-name indent">More Info</span>
+                    <span class="white-text">: can be found by contacting me</span>
+                    <br>
+                    <span class="color-bracket">}</span>
+                    <br><br>
+                    <span class="color-tag">my.skills </span><span class="color-bracket">{</span>
+                    <br>
+                    <span class="color-name indent">coding languages</span>
+                    <span class="white-text">: C, C++, HTML, CSS, avaScript, HP, ML, RUST, Python</span>
+                    <br>
+                    <span class="color-bracket">}</span>
+                </div>
             </div>
+            <div class="bottom-bar"></div>
         </section>
         <section id="preview-projects">
             <div class="section-body">
-                <h2>Projects</h2>
-                <p>Here are a few past, present, and future projects.</p>
+                <h2 id="projects-title">Projects</h2>
+                <table class="vertical-align center">
+                    <tbody>
+                        <tr>
+                            <td class="project-preview-box">
+                                <a href="">
+                                    <div id="algorithms-ppb" class="project-preview-box">
+                                        <div class="vertical-align project-preview-banner white-text">Algorithms</div>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="project-preview-box">
+                                <a href="">
+                                    <div id="algorithms-ppb" class="project-preview-box">
+                                        <div class="vertical-align project-preview-banner white-text">School</div>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="project-preview-box">
+                                <a href="">
+                                    <div id="algorithms-ppb" class="project-preview-box ">
+                                        <div class="vertical-align project-preview-banner white-text">CubeSat</div>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="project-preview-box">
+                                <a href="">
+                                    <div id="algorithms-ppb" class="project-preview-box">
+                                        <div class="vertical-align project-preview-banner white-text">This Website</div>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         <section id="preview-inspirations">

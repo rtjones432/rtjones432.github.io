@@ -23,20 +23,38 @@ h1 {
 }
 
 /* class charachteristics */
-.white {
-    color: white;
+.color-section-1 {
+    color: rgb(0, 51, 146);
 }
-.c1 {
-    color: rgb(0, 51, 146)
+.color-section-2 {
+    color: rgb(206, 101, 31);
 }
-.c2{
-    color: rgb(206, 101, 31)
+.color-section-3 {
+    color: rgb(119, 35, 21);
 }
-.c3{
-    color: rgb(119, 35, 21)
+.color-section-4 {
+    color:rgb(15, 136, 32);
 }
-.c4{
-    color:rgb(15, 136, 32)
+.color-line-nums {
+    color: rgb(133,133,133);
+}
+.color-comment {
+    color: rgb(93,152,71);
+}
+.color-tag {
+    color: rgb(215,185,129);
+}
+.color-bracket {
+    color: rgb(255,213,58);
+}
+.color-name {
+    color: rgb(139,220,218);
+}
+.white-text {
+    color: rgb(212,212,212);
+}
+.center {
+    border-left: 20vw;
 }
 .material-symbols-outlined {
     font-variation-settings:
@@ -54,6 +72,10 @@ div.section-body {
     top: 50%;
     transform: translateY(-50%);
 }
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
 a.top-menu {
     float: left;
     padding-left: 10px;
@@ -104,7 +126,18 @@ div.sbar5 {
     text-align: right;
     float:left;
 }
-
+.indent {
+    padding-left: 25px;
+}
+.bottom-bar {
+    bottom: 100%;
+    background-color: rgb(0,124,200);
+    height: 30px;
+    width: 100vw;
+}
+.section-body {
+    height: calc(100vh - 80px);
+}
 /* id charachteristics */
 #down-arrow {
     position: relative;
@@ -124,7 +157,7 @@ div.sbar5 {
     font-size: inherit;
 }
 #preview-info {
-    height: 100vh;
+    min-height: 100vh;
     background: rgb(31, 31, 31);
     color: rgb(0, 0, 0);
     font-size: 16px;
@@ -136,4 +169,87 @@ div.sbar5 {
 #preview-inspirations {
     height: 100vh;
     background: linear-gradient(rgb(var(--c1)) ,rgb(var(--c5)) 1%);
+}
+
+div.project-preview-box {
+    text-align: center;
+    margin:auto;
+    height: 30vh;
+    width: 30vw;
+    animation-name: projects-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+div.project-preview-box:hover {
+    height: 33vh;
+    width: 33vw;
+    border-radius: 0%;
+}
+td.project-preview-box {
+    height: 38vh;
+    width: 38vw;
+}
+a.project-preview-box {
+    height: 33vh;
+    width: 33vw;
+}
+
+.project-preview-banner {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3)
+}
+
+#algorithms-ppb {
+    background-color: brown;
+}
+#School-ppb {
+    background-color: brown;
+}
+#cubesat-ppb {
+    background-color: brown;
+}
+#website-ppb {
+    background-color: brown;
+}
+#right-bar-1{
+    position:fixed;
+    width: 15px;
+    height: 25vh;
+    right: 0px;
+    background-color: rgb(0, 51, 146);
+}
+#right-bar-2{
+    position:fixed;
+    width: 15px;
+    height: 25vh;
+    top:25vh;
+    right: 0px;
+    background-color: rgb(206, 101, 31);
+}
+#right-bar-3{
+    position:fixed;
+    width: 15px;
+    height: 25vh;
+    top:50vh;
+    right: 0px;
+    background-color: rgb(119, 35, 21);
+}
+#right-bar-4{
+    position:fixed;
+    width: 15px;
+    height: 25vh;
+    top: 75vh;
+    right: 0px;
+    background-color: rgb(15, 136, 32);
+}
+#projects-title {
+    text-align: center;
+    font-size: 50px;
+    transform: translateY(100px);
+}
+
+@keyframes projects-animation {
+    from {border-radius: 0%;}
+    to {border-radius: 20%;}
 }
