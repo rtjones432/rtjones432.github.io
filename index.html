@@ -18,7 +18,7 @@
                 vheight = home.offsetHeight;
                 screensDown = window.pageYOffset / vheight
                 console.log(vheight)
-                if (screensDown > 1) {
+                if (screensDown > 0.9) {
 
                     menuheight = 50;
                     menuFontSize = 25
@@ -26,8 +26,8 @@
                     menu.style.fontSize = menuFontSize.toString().concat("px");
                 }
                 else {
-                    menuheight = (200 - (150 * screensDown));
-                    menuFontSize = (50 - (25 * screensDown));
+                    menuheight = (200 - (150 * screensDown/0.9));
+                    menuFontSize = (50 - (25 * screensDown/0.9));
                     menu.style.height = menuheight.toString().concat("px");
                     menu.style.fontSize = menuFontSize.toString().concat("px");
                 }
